@@ -1,9 +1,21 @@
-# exercicios-python-estruturas-controle
-Exercícios e resolução de problemas que necessitam de estruturas de controle usando Python, com base nos exercícios disponibilizados pelo Curso em Vídeo de Python 3 Mundo 2 Estruturas de Controle.
+# Exercícios de Python — Estruturas de Controle
+
+Repositório de estudos com exercícios e resoluções de problemas que utilizam estruturas de controle em Python, baseado no curso Python 3 — Mundo 2: Estruturas de Controle, do Curso em Vídeo.
 
 ## Conteúdos
-- Exercícios e resoluções
-- Python 3
-- Estruturas de controle
-- Estrutura condicional aninhada
-- Estrutura de repetição com for e while
+
+- Estruturas condicionais simples e compostas;
+- Condições aninhadas;
+- Estruturas de repetição;
+- Laços `for` e `while`;
+- Resolução de problemas com Python.
+
+## Organização
+
+Cada pasta corresponde a uma aula ou a um assunto estudado.
+
+## Tecnologias
+
+- Python 3;
+- Jupyter Notebook;
+- Git e GitHub.
