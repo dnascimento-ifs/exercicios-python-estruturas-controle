@@ -1,5 +1,5 @@
 # exercicios-python-estruturas-controle
-Exercícios e resolução de problemas que necessitam de estruturas de controle usando python, com base nos exercícios disponibilizados pelo Curso em Vídeo de Python 3 Mundo 2 Estruturas de Controle.
+Exercícios e resolução de problemas que necessitam de estruturas de controle usando Python, com base nos exercícios disponibilizados pelo Curso em Vídeo de Python 3 Mundo 2 Estruturas de Controle.
 
 ## Conteúdos
 - Exercícios e resoluções
