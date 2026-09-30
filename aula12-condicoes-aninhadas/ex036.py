@@ -9,11 +9,11 @@ empréstimo será negado.
 
 valor_casa = float(input('Informe o valor da casa: R$ '))
 salario_comprador = float(input('Informe o salário do comprador: R$ '))
-trinta_porcento = salario_comprador * 0.3
-print(trinta_porcento)
 tempo_anos_pagar = int(input('Informe em quanto anos a casa será paga: '))
 
 prestacao_mensal = valor_casa / tempo_anos_pagar
+
+print(f'Para pagar uma casa de R${valor_casa:.2f} em {tempo_anos_pagar} anos a prestação será de R${prestacao_mensal:.2f}')
 
 if prestacao_mensal > (salario_comprador * 0.3):
     print('EMPRÉSTIMO NEGADO!')
