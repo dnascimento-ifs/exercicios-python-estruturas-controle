@@ -19,12 +19,12 @@ opcao_user = int(input('Sua opção: '))
 if opcao_user == 1:
     # Decisão para a opção 1
     # Converter o valor digitado para binário.
-    print(f'O valor {numero} convertido para binário é {bin(numero)}')
+    print(f'O valor {numero} convertido para binário é {bin(numero)[2:]}')
 
 elif opcao_user == 2:
     # Decisão para a opção 2
     # Converter o valor digitado para octal.
-    print(f'O valor {numero} convertido para octal é {oct(numero)}')
+    print(f'O valor {numero} convertido para octal é {oct(numero)[2:]}')
 
     # Usei mais um elif para um teste lógico melhor,
     # pois se eu uso else e coloco a decisão da opção 3
@@ -35,7 +35,7 @@ elif opcao_user == 2:
 elif opcao_user == 3:
     # Decisão para a opção 3
     # Converter o valor digitado para hexadecimal.
-    print(f'O valor {numero} convertido para hexadecimal é {hex(numero)}')
+    print(f'O valor {numero} convertido para hexadecimal é {hex(numero)[2:]}')
 
 else:
     print('OPÇÃO INVÁLIDA!')
