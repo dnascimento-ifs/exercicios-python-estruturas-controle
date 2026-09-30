@@ -15,7 +15,7 @@ tempo_anos_pagar = int(input('Informe em quanto anos a casa será paga: '))
 
 prestacao_mensal = valor_casa / tempo_anos_pagar
 
-if prestacao_mensal > (valor_casa * 0.3):
+if prestacao_mensal > (salario_comprador * 0.3):
     print('EMPRÉSTIMO NEGADO!')
 else:
     print('EMPRÉSTIMO APROVADO!')
