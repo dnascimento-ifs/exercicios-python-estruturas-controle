@@ -7,6 +7,9 @@ Seu programa também deverá mostrar o tempo que falta ou que passou do
 prazo.
 """
 
+# Corrigir erros de saída
+# analisar casos da condição.
+
 from datetime import date
 
 ano_nascimento = int(input('Informe seu ano de nascimento: '))
