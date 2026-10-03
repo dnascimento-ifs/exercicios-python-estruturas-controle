@@ -11,21 +11,31 @@ from datetime import date
 
 ano_nascimento = int(input('Informe seu ano de nascimento: '))
 
+# ano_atual = date.today().year
 ano_atual = int(input('Informe o ano que deseja analisar (0 para ano atual): '))
 
 if ano_atual == 0:
     ano_atual = date.today().year
 
-idade = ano_atual - ano_nascimento
+# Por que essa condição agora existe?
+# Porque quando eu dou ao usuário a opção de definir o ano de análise,
+# ele pode digitar um ano antes do ano de nascimento do participante,
+# deixando o tempo e idade incorretos!
+if ano_atual >= ano_nascimento:
+    idade = ano_atual - ano_nascimento
 
-print(f'Em {ano_atual} você tem {abs(idade)} anos.')
+    print(f'Em {ano_atual} você tem {idade} anos.')
 
-if idade == 18:
-    print('Está na hora de se alistar!')
+    # Olhar as saídas para corrigir erro de saída de dados
 
-elif idade < 18:
-    print(f'Não está na hora de se alistar!\nFaltam {18 - idade} anos.')
+    if idade == 18:
+        print('Está na hora de se alistar!')
+
+    elif idade < 18:
+        print(f'Não está na hora de se alistar!\nFaltam {18 - idade} anos.')
+
+    else:
+        print(f'Já passou da hora de se alistar!\nVocê deve ter se alistado há {idade - 18} anos.')
 
 else:
-    print(f'Já passou da hora de se alistar!\nVocê deveria ter se alistado há {idade - 18} anos.')
-
+    print(f'Não tem como essa pessoa se alistar no ano de {ano_atual}, pois ela nasceu em {ano_nascimento}!')
