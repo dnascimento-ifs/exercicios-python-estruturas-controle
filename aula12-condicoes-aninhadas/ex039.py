@@ -7,14 +7,10 @@ Seu programa também deverá mostrar o tempo que falta ou que passou do
 prazo.
 """
 
-# Corrigir erros de saída
-# analisar casos da condição.
-
 from datetime import date
 
 ano_nascimento = int(input('Informe seu ano de nascimento: '))
 
-# ano_atual = date.today().year
 ano_atual = int(input('Informe o ano que deseja analisar (0 para ano atual): '))
 
 if ano_atual == 0:
@@ -28,8 +24,6 @@ if ano_atual >= ano_nascimento:
     idade = ano_atual - ano_nascimento
 
     print(f'Em {ano_atual} você tem {idade} anos.')
-
-    # Olhar as saídas para corrigir erro de saída de dados
 
     if idade == 18:
         print('Está na hora de se alistar!')
