@@ -17,5 +17,4 @@ Cada pasta corresponde a uma aula ou a um assunto estudado.
 ## Tecnologias
 
 - Python 3;
-- Jupyter Notebook;
-- Git e GitHub.
+- Jupyter Notebook.
