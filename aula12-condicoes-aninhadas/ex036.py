@@ -11,7 +11,7 @@ valor_casa = float(input('Informe o valor da casa: R$ '))
 salario_comprador = float(input('Informe o salário do comprador: R$ '))
 tempo_anos_pagar = int(input('Informe em quanto anos a casa será paga: '))
 
-prestacao_mensal = valor_casa / tempo_anos_pagar
+prestacao_mensal = (valor_casa / tempo_anos_pagar) / 12
 
 print(f'Para pagar uma casa de R${valor_casa:.2f} em {tempo_anos_pagar} anos a prestação será de R${prestacao_mensal:.2f}')
 
