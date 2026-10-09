@@ -9,7 +9,10 @@ prazo.
 
 from datetime import date
 
-ano_nascimento = int(input('Informe seu ano de nascimento: '))
+ano_nascimento = int(input('Informe seu ano de nascimento (0 para ano atual): '))
+
+if ano_nascimento == 0:
+    ano_nascimento = date.today().year
 
 ano_atual = int(input('Informe o ano que deseja analisar (0 para ano atual): '))
 
@@ -22,17 +25,19 @@ if ano_atual == 0:
 # deixando o tempo e idade incorretos!
 if ano_atual >= ano_nascimento:
     idade = ano_atual - ano_nascimento
+    anos_falta_alistamento = 18 - idade
 
-    print(f'Em {ano_atual} você tem {idade} anos.')
+    print(f'Se você nasceu em {ano_nascimento}, em {ano_atual} você tem {idade} anos.')
 
     if idade == 18:
         print('Está na hora de se alistar!')
 
     elif idade < 18:
-        print(f'Não está na hora de se alistar!\nFaltam {18 - idade} anos.')
+        print(f'Não está na hora de se alistar!\nFaltam {anos_falta_alistamento} anos para você se alistar em {ano_atual + anos_falta_alistamento}')
 
     else:
-        print(f'Já passou da hora de se alistar!\nVocê deve ter se alistado há {idade - 18} anos.')
+        anos_passaram_alistamento = idade - 18
+        print(f'Já passou da hora de se alistar!\nVocê deve ter se alistado há {anos_passaram_alistamento} anos em {ano_atual - anos_passaram_alistamento}')
 
 else:
     print(f'Não tem como essa pessoa se alistar no ano de {ano_atual}, pois ela nasceu em {ano_nascimento}!')
