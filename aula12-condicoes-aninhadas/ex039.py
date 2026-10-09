@@ -19,7 +19,7 @@ ano_atual = int(input('Informe o ano que deseja analisar (0 para ano atual): '))
 if ano_atual == 0:
     ano_atual = date.today().year
 
-sexo_user = str(input('Informe seu sexo (M/F): '))
+sexo_user = str(input('Informe seu sexo (M/F): ')).upper().strip()
 
 # Por que essa condição agora existe?
 # Porque quando eu dou ao usuário a opção de definir o ano de análise,
