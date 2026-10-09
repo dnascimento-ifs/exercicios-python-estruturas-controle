@@ -30,7 +30,7 @@ if ano_atual >= ano_nascimento:
 
     print(f'Se você nasceu em {ano_nascimento}, em {ano_atual} você tem {idade} anos.')
 
-    if sexo == 'M':
+    if sexo_user == 'M':
     
         if idade == 18:
             print('Está na hora de se alistar!')
@@ -43,7 +43,7 @@ if ano_atual >= ano_nascimento:
             anos_passaram_alistamento = idade - 18
             print(f'Já passou da hora de se alistar!\nVocê deve ter se alistado há {anos_passaram_alistamento} anos em {ano_atual - anos_passaram_alistamento}')
 
-    elif sexo == 'F':
+    elif sexo_user == 'F':
         print('Você é mulher, portanto não tem alistamento obrigatório!')
 
     else:
