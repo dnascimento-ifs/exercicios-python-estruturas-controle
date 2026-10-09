@@ -25,7 +25,6 @@ if ano_atual == 0:
 # deixando o tempo e idade incorretos!
 if ano_atual >= ano_nascimento:
     idade = ano_atual - ano_nascimento
-    anos_falta_alistamento = 18 - idade
 
     print(f'Se você nasceu em {ano_nascimento}, em {ano_atual} você tem {idade} anos.')
 
@@ -33,6 +32,7 @@ if ano_atual >= ano_nascimento:
         print('Está na hora de se alistar!')
 
     elif idade < 18:
+        anos_falta_alistamento = 18 - idade
         print(f'Não está na hora de se alistar!\nFaltam {anos_falta_alistamento} anos para você se alistar em {ano_atual + anos_falta_alistamento}')
 
     else:
