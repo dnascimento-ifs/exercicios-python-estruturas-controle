@@ -19,6 +19,8 @@ ano_atual = int(input('Informe o ano que deseja analisar (0 para ano atual): '))
 if ano_atual == 0:
     ano_atual = date.today().year
 
+sexo_user = str(input('Informe seu sexo (M/F): '))
+
 # Por que essa condição agora existe?
 # Porque quando eu dou ao usuário a opção de definir o ano de análise,
 # ele pode digitar um ano antes do ano de nascimento do participante,
@@ -28,16 +30,24 @@ if ano_atual >= ano_nascimento:
 
     print(f'Se você nasceu em {ano_nascimento}, em {ano_atual} você tem {idade} anos.')
 
-    if idade == 18:
-        print('Está na hora de se alistar!')
+    if sexo == 'M':
+    
+        if idade == 18:
+            print('Está na hora de se alistar!')
 
-    elif idade < 18:
-        anos_falta_alistamento = 18 - idade
-        print(f'Não está na hora de se alistar!\nFaltam {anos_falta_alistamento} anos para você se alistar em {ano_atual + anos_falta_alistamento}')
+        elif idade < 18:
+            anos_falta_alistamento = 18 - idade
+            print(f'Não está na hora de se alistar!\nFaltam {anos_falta_alistamento} anos para você se alistar em {ano_atual + anos_falta_alistamento}')
+
+        else:
+            anos_passaram_alistamento = idade - 18
+            print(f'Já passou da hora de se alistar!\nVocê deve ter se alistado há {anos_passaram_alistamento} anos em {ano_atual - anos_passaram_alistamento}')
+
+    elif sexo == 'F':
+        print('Você é mulher, portanto não tem alistamento obrigatório!')
 
     else:
-        anos_passaram_alistamento = idade - 18
-        print(f'Já passou da hora de se alistar!\nVocê deve ter se alistado há {anos_passaram_alistamento} anos em {ano_atual - anos_passaram_alistamento}')
+        print('\033[91mERRO!\033[0m Sexo informado inválido!')
 
 else:
     print(f'Não tem como essa pessoa se alistar no ano de {ano_atual}, pois ela nasceu em {ano_nascimento}!')
